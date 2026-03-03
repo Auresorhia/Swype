@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connexion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page-login">
+  <div class="device device--login" id="device">
+    <header class="login-top">
+      <a class="login-back" href="index.html" aria-label="Retour">
+        <span class="login-back__icon" aria-hidden="true">←</span>
+        <span class="login-back__text">Retour</span>
+      </a>
+    </header>
+
+    <main class="login" aria-label="Connexion">
+      <div class="login-center">
+        <div class="login-head">
+          <h1 class="login-title">Connexion</h1>
+          <p class="login-subtitle">Bon retour parmi vous</p>
+        </div>
+
+        <form class="login-form" id="loginForm">
+          <label class="field">
+            <span class="field-label">Email</span>
+            <input class="field-input" type="email" name="email" placeholder="Entrez votre email" autocomplete="email"
+              value="lina@gmail.com" required />
+          </label>
+
+          <label class="field">
+            <span class="field-label">Mot de passe</span>
+            <input class="field-input" type="password" name="password" placeholder="Entrez votre mot de passe"
+              value="123456789" autocomplete="current-password" required />
+          </label>
+
+          <a class="login-forgot" href="#" id="forgotLink">Mot de passe oublié ?</a>
+
+          <button class="login-submit" type="submit">Se connecter</button>
+        </form>
+
+        <p class="login-foot">
+          Pas encore de compte ?
+          <a class="login-signup" href="inscription.html">S’inscrire</a>
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <script src="connexion.js"></script>
+</body>
+
+</html>

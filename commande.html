@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commande</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page-commande">
+  <div class="commande-shell" id="commande">
+    <header class="commande-top" aria-label="En-tête">
+      <a class="commande-back" href="panier.html" aria-label="Retour au panier">
+        <span class="commande-back__arrow" aria-hidden="true">←</span>
+        <span class="commande-back__label">Retour au panier</span>
+      </a>
+    </header>
+
+    <main class="commande" aria-label="Commande">
+      <header class="commande-head" aria-label="Titre">
+        <h1 class="commande-title">Finaliser ma commande</h1>
+        <p class="commande-subtitle">Plus qu'une étape avant de valider</p>
+      </header>
+
+      <section class="commande-section" aria-label="Adresse de facturation">
+        <h2 class="commande-section__title">
+          <span class="commande-section__icon" aria-hidden="true">📍</span>
+          Adresse de facturation
+        </h2>
+
+        <div class="commande-form">
+          <label class="commande-field">
+            <span class="commande-label">Adresse</span>
+            <input class="commande-input" type="text" value="123 Rue de la Mode" />
+          </label>
+
+          <div class="commande-row">
+            <label class="commande-field">
+              <span class="commande-label">Ville</span>
+              <input class="commande-input" type="text" value="Paris" />
+            </label>
+            <label class="commande-field">
+              <span class="commande-label">Code postal</span>
+              <input class="commande-input" type="text" value="75001" />
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="commande-section" aria-label="Adresse de livraison">
+        <h2 class="commande-section__title">
+          <span class="commande-section__icon" aria-hidden="true">🚚</span>
+          Adresse de livraison
+        </h2>
+
+        <div class="commande-form">
+          <label class="commande-field">
+            <span class="commande-label">Adresse</span>
+            <input class="commande-input" type="text" value="123 Rue de la Mode" />
+          </label>
+
+          <div class="commande-row">
+            <label class="commande-field">
+              <span class="commande-label">Ville</span>
+              <input class="commande-input" type="text" value="Paris" />
+            </label>
+            <label class="commande-field">
+              <span class="commande-label">Code postal</span>
+              <input class="commande-input" type="text" value="75001" />
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="commande-payment" aria-label="Mode de paiement">
+        <h2 class="commande-payment__title">
+          <span class="commande-payment__icon" aria-hidden="true">💳</span>
+          Mode de paiement
+        </h2>
+
+        <div class="commande-payment__card">
+          <button class="commande-payopt commande-payopt--active" type="button" aria-label="Carte bancaire"
+            data-pay="card">
+            <div class="commande-payopt__title">Carte bancaire</div>
+            <div class="commande-payopt__desc">Saisie manuelle des informations</div>
+          </button>
+
+          <button class="commande-payopt" type="button" aria-label="Face ID" data-pay="faceid">
+            <div class="commande-payopt__title">Face ID</div>
+            <div class="commande-payopt__desc">Paiement sécurisé par reconnaissance faciale</div>
+          </button>
+
+          <button class="commande-payopt" type="button" aria-label="Scanner la carte" data-pay="scan">
+            <div class="commande-payopt__title">Scanner la carte</div>
+            <div class="commande-payopt__desc">Utilisez votre appareil photo</div>
+          </button>
+        </div>
+      </section>
+
+      <div class="commande-footer" aria-label="Valider">
+        <button class="commande-submit" id="btnValiderCommande" type="button">✓&nbsp;&nbsp;Valider ma commande</button>
+      </div>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="applepay-modal" id="applePayModal" aria-hidden="true">
+      <div class="applepay-backdrop" data-applepay-close></div>
+      <div class="applepay-sheet" role="dialog" aria-modal="true" aria-label="Apple Pay">
+        <div class="applepay-top">
+          <div class="applepay-title" aria-label="Apple Pay">
+            <span class="applepay-apple" aria-hidden="true"></span><span class="applepay-pay">Pay</span>
+          </div>
+          <button class="applepay-close" type="button" aria-label="Fermer" data-applepay-close>✕</button>
+        </div>
+
+        <div class="applepay-card">
+          <div class="applepay-card__row">
+            <div class="applepay-card__flag" aria-hidden="true"></div>
+            <div class="applepay-card__meta">
+              <div class="applepay-card__name">Klarna</div>
+              <div class="applepay-card__sub">Pay in 4</div>
+            </div>
+            <div class="applepay-card__dots" aria-hidden="true">••• 1234</div>
+          </div>
+
+          <div class="applepay-divider" aria-hidden="true"></div>
+
+          <button class="applepay-line" type="button" aria-label="Adresse de livraison">
+            <span class="applepay-line__label">Shipping</span>
+            <span class="applepay-line__value">123 Rue de la Mode</span>
+            <span class="applepay-line__chev" aria-hidden="true">›</span>
+          </button>
+
+          <button class="applepay-line" type="button" aria-label="Mode de livraison">
+            <span class="applepay-line__label">Delivery</span>
+            <span class="applepay-line__value">Standard</span>
+            <span class="applepay-line__chev" aria-hidden="true">›</span>
+          </button>
+
+          <div class="applepay-divider" aria-hidden="true"></div>
+
+          <div class="applepay-total">
+            <div class="applepay-total__label">Total</div>
+            <div class="applepay-total__value">75,00 €</div>
+          </div>
+        </div>
+
+        <button class="applepay-confirm" id="applePayConfirm" type="button"
+          aria-label="Confirmer avec le bouton latéral">
+          <span class="applepay-confirm__icon" aria-hidden="true">􀎞</span>
+          Confirm with Side Button
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="commande.js"></script>
+</body>
+
+</html>

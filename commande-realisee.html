@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commande validée</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page-commande-realisee">
+  <div class="commande-ok-shell" id="commandeOk">
+    <header class="commande-ok-top" aria-label="En-tête">
+      <a class="commande-ok-back" href="panier.html" aria-label="Retour">
+        <span class="commande-ok-back__arrow" aria-hidden="true">←</span>
+        <span class="commande-ok-back__label">Retour</span>
+      </a>
+      <img class="commande-ok-logo" src="asset/logo/logo-swype.webp" alt="SWype" />
+    </header>
+
+    <main class="commande-ok" aria-label="Commande validée">
+      <header class="commande-ok-head" aria-label="Merci">
+        <h1 class="commande-ok-title">Merci pour votre commande&nbsp;!</h1>
+        <p class="commande-ok-subtitle">Votre commande a été validée avec succès</p>
+      </header>
+
+      <section class="commande-ok-card" aria-label="Détails commande">
+        <div class="commande-ok-row">
+          <div class="commande-ok-label">Numéro de commande</div>
+          <div class="commande-ok-value" id="orderNumber">#SS000000</div>
+        </div>
+        <div class="commande-ok-row">
+          <div class="commande-ok-label">Date</div>
+          <div class="commande-ok-value" id="orderDate">--/--/----</div>
+        </div>
+        <div class="commande-ok-row commande-ok-row--last">
+          <div class="commande-ok-label">Livraison estimée</div>
+          <div class="commande-ok-value" id="deliveryDate">--/--/----</div>
+        </div>
+
+        <p class="commande-ok-note">Un email de confirmation vous a été envoyé avec tous les détails de votre commande.</p>
+      </section>
+
+      <p class="commande-ok-help">Besoin d'aide&nbsp;? Contactez notre <a class="commande-ok-link" href="#">service client</a></p>
+
+      <div class="commande-ok-actions" aria-label="Actions">
+        <a class="commande-ok-btn commande-ok-btn--primary" href="accueil.html">Retour à l'accueil</a>
+        <a class="commande-ok-btn commande-ok-btn--outline" href="#">Voir mes commandes</a>
+      </div>
+    </main>
+  </div>
+
+  <script src="commande-realisee.js"></script>
+</body>
+
+</html>

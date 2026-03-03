@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page-panier">
+  <div class="panier-shell" id="panier">
+    <header class="panier-top" aria-label="En-tête">
+      <h1 class="panier-title">Mon Panier</h1>
+      <div class="panier-count">2 articles</div>
+    </header>
+
+    <main class="panier" aria-label="Panier">
+      <section class="panier-list" aria-label="Articles du panier">
+        <article class="panier-item" aria-label="Article 1">
+          <div class="panier-item__media" style="background-image: url('asset/vetements/bag.png');" aria-hidden="true">
+          </div>
+          <div class="panier-item__content">
+            <div class="panier-item__row">
+              <div class="panier-item__title">SAC Y2K</div>
+            </div>
+            <div class="panier-item__meta">À Chaines</div>
+            <div class="panier-item__meta">Noir/Rose</div>
+            <div class="panier-item__price">14,99€</div>
+          </div>
+          <button class="panier-item__trash" type="button" aria-label="Supprimer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path d="M9 3H15M4 6H20M10 6V5C10 4.44772 10.4477 4 11 4H13C13.5523 4 14 4.44772 14 5V6M7 6L8 21H16L17 6"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </article>
+
+        <article class="panier-item" aria-label="Article 2">
+          <div class="panier-item__media" style="background-image: url('asset/vetements/jerseyy.png');"
+            aria-hidden="true"></div>
+          <div class="panier-item__content">
+            <div class="panier-item__row">
+              <div class="panier-item__title">Robe Élégante</div>
+            </div>
+            <div class="panier-item__meta">Soirée</div>
+            <div class="panier-item__meta">Taille: S</div>
+            <div class="panier-item__price">149€</div>
+          </div>
+          <button class="panier-item__trash" type="button" aria-label="Supprimer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path d="M9 3H15M4 6H20M10 6V5C10 4.44772 10.4477 4 11 4H13C13.5523 4 14 4.44772 14 5V6M7 6L8 21H16L17 6"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </article>
+      </section>
+
+      <section class="panier-summary" aria-label="Résumé de la commande">
+        <h2 class="panier-summary__title">Résumé de la commande</h2>
+        <div class="panier-summary__rows">
+          <div class="panier-summary__row">
+            <div class="panier-summary__label">Sous-total</div>
+            <div class="panier-summary__value">238.00€</div>
+          </div>
+          <div class="panier-summary__row">
+            <div class="panier-summary__label">Livraison</div>
+            <div class="panier-summary__value">Gratuite</div>
+          </div>
+        </div>
+
+        <div class="panier-summary__total">
+          <div class="panier-summary__total-label">Total</div>
+          <div class="panier-summary__total-value">238.00€</div>
+        </div>
+
+        <a class="panier-summary__cta" href="commande.html">Commander</a>
+      </section>
+    </main>
+
+    <nav class="tabbar" aria-label="Navigation principale">
+      <a class="tabbar-item" href="accueil.html" aria-label="Accueil">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true">
+          <path d="M3 10.5L12 3L21 10.5V20H14V14H10V20H3V10.5Z" stroke="currentColor" stroke-width="1.8"
+            stroke-linejoin="round" />
+        </svg>
+        <span class="tabbar-label">Accueil</span>
+      </a>
+      <a class="tabbar-item" href="favoris.html" aria-label="Favoris">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true">
+          <path
+            d="M12 20S4.5 15.2 4.5 9.8C4.5 7 6.7 5 9.4 5C10.9 5 12 5.8 12 5.8C12 5.8 13.1 5 14.6 5C17.3 5 19.5 7 19.5 9.8C19.5 15.2 12 20 12 20Z"
+            stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+        </svg>
+        <span class="tabbar-label">Favoris</span>
+      </a>
+      <a class="tabbar-item tabbar-item--active" href="panier.html" aria-label="Panier">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true">
+          <path d="M6 6H21L20 14H8L6 3H3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path
+            d="M9 20C9.55228 20 10 19.5523 10 19C10 18.4477 9.55228 18 9 18C8.44772 18 8 18.4477 8 19C8 19.5523 8.44772 20 9 20Z"
+            fill="currentColor" />
+          <path
+            d="M18 20C18.5523 20 19 19.5523 19 19C19 18.4477 18.5523 18 18 18C17.4477 18 17 18.4477 17 19C17 19.5523 17.4477 20 18 20Z"
+            fill="currentColor" />
+        </svg>
+        <span class="tabbar-label">Panier</span>
+      </a>
+      <a class="tabbar-item" href="compte.html" aria-label="Compte">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true">
+          <path
+            d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z"
+            stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+          <path d="M4 20C4.8 16.6 8 14.5 12 14.5C16 14.5 19.2 16.6 20 20" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" />
+        </svg>
+        <span class="tabbar-label">Compte</span>
+      </a>
+    </nav>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon compte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page-compte">
+  <div class="compte-shell" id="compte">
+    <header class="compte-top" aria-label="En-tête">
+      <div class="compte-top__row">
+        <div>
+          <h1 class="compte-title">Mon compte</h1>
+          <p class="compte-subtitle">Gérez vos informations</p>
+        </div>
+        <a class="compte-logout" href="index.html" aria-label="Déconnexion">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M10 7V5C10 4.44772 10.4477 4 11 4H19C19.5523 4 20 4.44772 20 5V19C20 19.5523 19.5523 20 19 20H11C10.4477 20 10 19.5523 10 19V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            <path d="M14 12H4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            <path d="M7 9L4 12L7 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <main class="compte" aria-label="Mon compte">
+      <section class="compte-section" aria-label="Informations personnelles">
+        <h2 class="compte-section__title">Informations personnelles</h2>
+
+        <div class="compte-grid compte-grid--2">
+          <label class="compte-field">
+            <span class="compte-label">Prénom</span>
+            <input class="compte-input" type="text" value="Jean" />
+          </label>
+          <label class="compte-field">
+            <span class="compte-label">Nom</span>
+            <input class="compte-input" type="text" value="Dupont" />
+          </label>
+        </div>
+
+        <label class="compte-field">
+          <span class="compte-label">Email</span>
+          <input class="compte-input" type="email" placeholder="votre@email.com" />
+        </label>
+
+        <label class="compte-field">
+          <span class="compte-label">Numéro de téléphone</span>
+          <input class="compte-input compte-input--muted" type="tel" value="06 12 34 56 78" />
+        </label>
+      </section>
+
+      <section class="compte-section" aria-label="Adresse de livraison">
+        <h2 class="compte-section__title">Adresse de livraison</h2>
+
+        <label class="compte-field">
+          <span class="compte-label">Adresse</span>
+          <input class="compte-input" type="text" value="123 Rue de la Mode" />
+        </label>
+
+        <div class="compte-grid compte-grid--2">
+          <label class="compte-field">
+            <span class="compte-label">Ville</span>
+            <input class="compte-input" type="text" value="Paris" />
+          </label>
+          <label class="compte-field">
+            <span class="compte-label">Code postal</span>
+            <input class="compte-input" type="text" value="75001" />
+          </label>
+        </div>
+      </section>
+
+      <section class="compte-section" aria-label="Préférences de style">
+        <h2 class="compte-section__title">Préférences de style</h2>
+
+        <label class="compte-field">
+          <span class="compte-label">Styles préférés</span>
+          <input class="compte-input" type="text" placeholder="Ex: Streetwear, Vintage, Minimaliste" />
+        </label>
+
+        <div class="compte-grid compte-grid--3">
+          <label class="compte-field">
+            <span class="compte-label">Taille du haut</span>
+            <input class="compte-input" type="text" value="M" />
+          </label>
+          <label class="compte-field">
+            <span class="compte-label">Taille du bas</span>
+            <input class="compte-input" type="text" value="42" />
+          </label>
+          <label class="compte-field">
+            <span class="compte-label">Pointure</span>
+            <input class="compte-input" type="text" value="42" />
+          </label>
+        </div>
+      </section>
+
+      <section class="compte-section" aria-label="Mes inspirations">
+        <h2 class="compte-section__title">Mes inspirations</h2>
+
+        <label class="compte-field">
+          <span class="compte-label">Influenceurs / Comptes</span>
+          <input class="compte-input" type="text" placeholder="Ex: @influenceur1, @influenceur2" />
+        </label>
+
+        <div class="compte-field">
+          <span class="compte-label">Images que j'aime</span>
+          <div class="compte-insp">
+            <div class="compte-insp__img" style="background-image: url('asset/vetements/bag.png');" aria-label="Inspiration 1"></div>
+            <div class="compte-insp__img" style="background-image: url('asset/vetements/dickies.png');" aria-label="Inspiration 2"></div>
+            <button class="compte-insp__add" type="button" aria-label="Ajouter une inspiration">+</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="compte-save" aria-label="Sauvegarder">
+      <button class="compte-save__btn" type="button">Sauvegarder les modifications</button>
+    </div>
+
+    <nav class="tabbar" aria-label="Navigation principale">
+      <a class="tabbar-item" href="accueil.html" aria-label="Accueil">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3 10.5L12 3L21 10.5V20H14V14H10V20H3V10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+        </svg>
+        <span class="tabbar-label">Accueil</span>
+      </a>
+      <a class="tabbar-item" href="favoris.html" aria-label="Favoris">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 20S4.5 15.2 4.5 9.8C4.5 7 6.7 5 9.4 5C10.9 5 12 5.8 12 5.8C12 5.8 13.1 5 14.6 5C17.3 5 19.5 7 19.5 9.8C19.5 15.2 12 20 12 20Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+        </svg>
+        <span class="tabbar-label">Favoris</span>
+      </a>
+      <a class="tabbar-item" href="panier.html" aria-label="Panier">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 6H21L20 14H8L6 3H3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M9 20C9.55228 20 10 19.5523 10 19C10 18.4477 9.55228 18 9 18C8.44772 18 8 18.4477 8 19C8 19.5523 8.44772 20 9 20Z" fill="currentColor" />
+          <path d="M18 20C18.5523 20 19 19.5523 19 19C19 18.4477 18.5523 18 18 18C17.4477 18 17 18.4477 17 19C17 19.5523 17.4477 20 18 20Z" fill="currentColor" />
+        </svg>
+        <span class="tabbar-label">Panier</span>
+      </a>
+      <a class="tabbar-item tabbar-item--active" href="compte.html" aria-label="Compte">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+          <path d="M4 20C4.8 16.6 8 14.5 12 14.5C16 14.5 19.2 16.6 20 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
+        <span class="tabbar-label">Compte</span>
+      </a>
+    </nav>
+  </div>
+</body>
+
+</html>
